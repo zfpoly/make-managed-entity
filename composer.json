@@ -1,5 +1,5 @@
 {
-    "name": "your-vendor-name/package-name",
+    "name": "zfpoly/make-managed-entity",
     "description": "A short description of what your package does",
     "require": {
         "php": "^7.0.8",
