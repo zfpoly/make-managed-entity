@@ -1,0 +1,8 @@
+{
+    "name": "your-vendor-name/package-name",
+    "description": "A short description of what your package does",
+    "require": {
+        "php": "^7.0.8",
+        "symfony/maker-bundle": "^1.0"
+    }
+}
