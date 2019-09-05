@@ -6,9 +6,9 @@
  * Time: 11:23 AM
  */
 
-namespace App\Command\ManagerMaker\Doctrine;
+namespace Bemila\Bundle\ManagerMakerBundle\Doctrine;
 
-use App\Command\ManagerMaker\GeneratorExtension;
+use Bemila\Bundle\ManagerMakerBundle\GeneratorExtension;
 use Symfony\Bundle\MakerBundle\Util\ClassNameDetails;
 
 class EntityClassGeneratorExtension

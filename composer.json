@@ -1,8 +1,13 @@
 {
-    "name": "zfpoly/make-managed-entity",
-    "description": "A short description of what your package does",
+    "name": "bemila/manager-maker",
+    "description": "Create an entity with its manager for crud",
+    "type": "symfony-bundle",
+    "license": "MIT",
     "require": {
         "php": "^7.0.8",
         "symfony/maker-bundle": "^1.0"
+    },
+    "autoload": {
+        "psr-4": { "Bemila\\Bundle\\ManagerMakerBundle\\": "src/" }
     }
 }

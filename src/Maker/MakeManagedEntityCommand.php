@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Command\ManagerMaker;
+namespace Bemila\Bundle\ManagerMaker\Maker;
 
-use App\Command\ManagerMaker\Doctrine\DoctrineHelperExtension;
-use App\Command\ManagerMaker\Doctrine\EntityClassGeneratorExtension;
+use Bemila\Bundle\ManagerMaker\Doctrine\DoctrineHelperExtension;
+use Bemila\Bundle\ManagerMaker\Doctrine\EntityClassGeneratorExtension;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
@@ -59,7 +59,7 @@ class MakeManagedEntityCommand extends AbstractMaker
      */
     public static function getCommandName(): string
     {
-        return 'make:manager-entity';
+        return 'make:kanaged-entity';
     }
 
     /**

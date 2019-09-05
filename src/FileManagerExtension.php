@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Command\ManagerMaker;
+namespace Bemila\Bundle\ManagerMakerBundle;
 
-use App\Command\ManagerMaker\Util\ComposerAutoloaderFinderExtesion;
+use Bemila\Bundle\ManagerMakerBundle\Util\ComposerAutoloaderFinderExtesion;
 use Symfony\Bundle\MakerBundle\FileManager;
 use Symfony\Bundle\MakerBundle\Util\AutoloaderUtil;
 use Symfony\Component\Filesystem\Filesystem;
@@ -19,14 +19,15 @@ class FileManagerExtension extends FileManager
      */
     public function __construct(
         Filesystem $fs,
-        KernelInterface $kernel,
-        ComposerAutoloaderFinderExtesion $composerAutoloaderFinder
+        ComposerAutoloaderFinderExtesion $composerAutoloaderFinder,
+        string $projectDirectory,
+        string $defaultTemplateDirectory
     ) {
         parent::__construct(
             $fs,
             new AutoloaderUtil($composerAutoloaderFinder),
-            $kernel->getProjectDir(),
-            $kernel->getProjectDir() . '/templates'
+            $projectDirectory,
+            $defaultTemplateDirectory
         );
     }
 }

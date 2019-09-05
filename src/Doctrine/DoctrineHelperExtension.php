@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command\ManagerMaker\Doctrine;
+namespace Bemila\Bundle\ManagerMakerBundle\Doctrine;
 
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Symfony\Bundle\MakerBundle\Doctrine\DoctrineHelper;

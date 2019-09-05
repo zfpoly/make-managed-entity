@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+        <services>
+            <defaults public="false" />
+
+            <service id="maker.autoloader_finder_extension" class="Bemila\Bundle\ManagerMakerBundle\Util\ComposerAutoloaderFinderExtension" >
+            </service>
+            
+            <service id="maker.file_manager_extension" class="Bemila\Bundle\ManagerMakerBundle\FileManagerExtension">
+                <argument type="service" id="filesystem" />
+                <argument type="service" id="maker.autoloader_finder_extension" />
+                <argument>%kernel.project_dir%</argument>
+                <argument>%twig.default_path%</argument>
+            </service>
+
+            <service id="maker.generator_extension" class="Bemila\Bundle\ManagerMakerBundle\GeneratorExtension">
+                <argument type="service" id="maker.file_manager_extesion" />
+            </service>
+
+            <service id="maker.entity_class_generator_extension" class="Bemila\Bundle\ManagerMakerBundle\Doctrine\EntityClassGeneratorExtension">
+                <argument type="service" id="maker.generator_extension" />
+            </service>
+
+            <service id="maker.doctrine_helper_extension" class="Bemila\Bundle\ManagerMakerBundle\Doctrine\DoctrineHelperExtension">
+                <argument type="service" id="doctrine" on-invalid="ignore" />
+            </service>
+
+        </services>
+</container>

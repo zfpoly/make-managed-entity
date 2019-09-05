@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command\ManagerMaker\Util;
+namespace Bemila\Bundle\ManagerMakerBundle\Util;
 
 use Composer\Autoload\ClassLoader;
 use Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder;
