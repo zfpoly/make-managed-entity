@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command\ManagerMaker;
+namespace Bemila\Bundle\ManagerMakerBundle;
 
 use Symfony\Bundle\MakerBundle\Exception\RuntimeCommandException;
 use Symfony\Bundle\MakerBundle\Generator;
@@ -16,11 +16,12 @@ class GeneratorExtension extends Generator
      * GeneratorExtension constructor.
      *
      * @param FileManagerExtension $fileManagerExtension
+     * @param string               $rootNamespace
      */
-    public function __construct(FileManagerExtension $fileManagerExtension)
+    public function __construct(FileManagerExtension $fileManagerExtension, string $rootNamespace)
     {
         $this->fileManagerExtension = $fileManagerExtension;
-        parent::__construct($fileManagerExtension, "App\\");
+        parent::__construct($fileManagerExtension, $rootNamespace);
     }
 
     /**

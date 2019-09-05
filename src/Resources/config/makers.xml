@@ -7,10 +7,11 @@
         <services>
             <defaults public="false" />
 
-            <service id="maker.maker.make_managed_entity" class="Symfony\Bundle\MakerBundle\Maker\MakeManagedEntity">
-                <argument type="service" id="maker.doctrine_helper_extension" />
-                <argument type="service" id="maker.file_manager_extension" />
-                <argument type="service" id="maker.generator_extension" />
+            <service id="bemila.maker.make_managed_entity" class="Bemila\Bundle\ManagerMakerBundle\Maker\MakeManagedEntity">
+                <argument type="service" id="bemila.doctrine_helper_extension" />
+                <argument type="service" id="bemila.file_manager_extension" />
+                <argument type="service" id="bemila.generator_extension" />
+                <argument>%kernel.project_dir%</argument>
                 <tag name="maker.command" />
             </service>
         </services>

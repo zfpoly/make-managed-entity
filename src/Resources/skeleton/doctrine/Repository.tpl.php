@@ -3,7 +3,7 @@
 namespace <?= $namespace; ?>;
 
 use <?= $entity_full_class_name; ?>;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use App\Repository\AbstractManagedEntityRepository;
 <?= $with_password_upgrade ? "use Symfony\Component\Security\Core\Exception\UnsupportedUserException;\n" : '' ?>
 <?= $with_password_upgrade ? "use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;\n" : '' ?>
 <?= $with_password_upgrade ? "use Symfony\Component\Security\Core\User\UserInterface;\n" : '' ?>
@@ -19,9 +19,9 @@ class <?= $class_name; ?> extends AbstractManagedEntityRepository<?= $with_passw
     /**
      * {@inheritdoc}
      */
-    public function __construct(ManagerRegistry $registry)
+    public function getRepositoryEntityClassName(): string
     {
-        parent::__construct($registry, <?= $entity_class_name; ?>::class);
+        return <?= $entity_class_name; ?>::class;
     }
 <?php if ($with_password_upgrade): ?>
 

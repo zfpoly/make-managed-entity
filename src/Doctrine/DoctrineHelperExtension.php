@@ -15,11 +15,12 @@ class DoctrineHelperExtension
     /**
      * DoctrineHelperExtension constructor.
      *
+     * @param string          $entityNamespace
      * @param ManagerRegistry $registry
      */
-    public function __construct(ManagerRegistry $registry)
+    public function __construct(string $entityNamespace, ManagerRegistry $registry)
     {
-        $this->doctrineHelper = new DoctrineHelper('App\Entity', $registry);
+        $this->doctrineHelper = new DoctrineHelper($entityNamespace, $registry);
     }
 
     /**

@@ -5,7 +5,6 @@ namespace <?= $namespace ?>;
 
 use App\Entity\ManagedEntityInterface;
 use App\Repository\RepositoryInterface;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityManagerInterface;
 use \InvalidArgumentException;
 

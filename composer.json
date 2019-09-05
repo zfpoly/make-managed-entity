@@ -1,10 +1,12 @@
 {
-    "name": "bemila/manager-maker",
-    "description": "Create an entity with its manager for crud",
+    "name": "zfpoly/manager-maker-bundle",
+    "description": "creates or updates a Doctrine entity class with a Manager to handle its crud operations, and optionally an API Platform resource.",
     "type": "symfony-bundle",
     "license": "MIT",
     "require": {
-        "php": "^7.0.8",
+        "php": "^7.0.8"
+    },
+    "require-dev": {
         "symfony/maker-bundle": "^1.0"
     },
     "autoload": {

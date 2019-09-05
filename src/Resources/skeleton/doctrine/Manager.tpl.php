@@ -3,7 +3,7 @@
 namespace <?= $namespace ?>;
 
 use <?= $entity_full_class_name; ?>;
-use App\Repository\RepositoryInterface;
+use App\Manager\AbstractManager;
 
 class <?= $class_name ?> extends AbstractManager
 {
