@@ -3,7 +3,7 @@
 namespace <?= $namespace; ?>;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\ManagerRegistry;
+use Doctrine\Common\Persistence\ManagerRegistry;
 
 abstract class AbstractManagedEntityRepository extends ServiceEntityRepository implements RepositoryInterface
 {
