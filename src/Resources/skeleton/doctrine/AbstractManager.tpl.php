@@ -1,6 +1,5 @@
 <?= "<?php\n" ?>
 
-
 namespace <?= $namespace ?>;
 
 use App\Entity\ManagedEntityInterface;
