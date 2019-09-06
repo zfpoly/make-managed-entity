@@ -32,7 +32,7 @@ abstract class AbstractManager implements ManagerInterface
      */
     public function getRepository(): RepositoryInterface
     {
-        $this->repository;
+        return $this->repository;
     }
 
     /**
